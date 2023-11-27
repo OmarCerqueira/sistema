@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { IconeEditarModule, IconeVisualizarModule, LayoutModule } from 'projects/layout/src/public-api';
+import { IconeEditarModule, IconeExcluirModule, IconeVisualizarModule, LayoutModule } from 'projects/layout/src/public-api';
 import { BotaoAdicionarModule } from 'projects/layout/src/lib/botao-adicionar/botao-adicionar.module';
 
 @NgModule({
@@ -14,7 +14,8 @@ import { BotaoAdicionarModule } from 'projects/layout/src/lib/botao-adicionar/bo
     LayoutModule,
     BotaoAdicionarModule,
     IconeEditarModule,
-    IconeVisualizarModule
+    IconeVisualizarModule,
+    IconeExcluirModule
   ],
   providers: [],
   bootstrap: [AppComponent]
