@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <h4 class="m-2">Título</h4>
+      <h4 class="m-2"> {{ titulo }} </h4>
     </div>
     <div class="col-sm-6">
 
@@ -21,12 +21,14 @@
         <th scope="col" class="text-center">Ações</th>
       </tr>
     </thead>
+    <!-- passando objeto para html -->
+    <!-- {{ pessoas | json }} -->
     <tbody>
-      <tr>
-        <td scope="row">Omar Cerqueira</td>
-        <td>Rua Jorge Simões</td>
-        <td>omar@cerqueira.com.br</td>
-        <td>123.456.789-52</td>
+      <tr *ngFor="let pessoa of pessoas">
+        <td scope="row"> {{ pessoa.nome }} </td>
+        <td> {{ pessoa.endereco }} </td>
+        <td> {{ pessoa.email }} </td>
+        <td> {{ pessoa.cpf }} </td>
         <td class="text-center">
 
           <lib-icone-editar></lib-icone-editar>
@@ -37,36 +39,7 @@
 
         </td>
       </tr>
-      <tr>
-        <td scope="row">Rafael Oliveira</td>
-        <td>Rua Dendezeiro</td>
-        <td>rafael@cerqueira.com.br</td>
-        <td>456.256.213.-56</td>
-        <td class="text-center">
 
-          <lib-icone-editar></lib-icone-editar>
-
-
-
-          <lib-icone-excluir></lib-icone-excluir>
-
-        </td>
-      </tr>
-      <tr>
-        <td scope="row">Lucas Santana</td>
-        <td>Rua Imperatriz</td>
-        <td>lucas@cerqueira.com.br</td>
-        <td>546.365.152-87</td>
-        <td class="text-center">
-
-          <lib-icone-editar></lib-icone-editar>
-
-
-
-          <lib-icone-excluir></lib-icone-excluir>
-
-        </td>
-      </tr>
     </tbody>
   </table>
 </div>
