@@ -6,6 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  // adicionar()  {
+  //   let contador = 0;
+
+  //   contador = 'pessoas'.length+1;
+
+  //   this.pessoas.push = {'nome'}
+
+
+  // }
+
+  adicionar() {
+    const novaLinha = {
+      nome: `Nova Linha ${this.pessoas.length + 1}`,
+      endereco: `Nova Linha ${this.pessoas.length + 1}`,
+      email: `Nova Linha ${this.pessoas.length + 1}`,
+      cpf: `Nova Linha ${this.pessoas.length + 1}`
+    };
+    
+    this.pessoas.push(novaLinha);
+  }
+
   titulo = 'Lista de Pessoas';
 
   pessoas = [
@@ -34,4 +56,11 @@ export class AppComponent {
       'cpf' : '458.623.548-21'
     }
   ]
+
+
+
+
+
+
+
 }
