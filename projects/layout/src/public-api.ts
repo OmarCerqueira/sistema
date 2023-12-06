@@ -5,6 +5,9 @@ export * from './lib/layout.module';
 export * from './lib/botao-adicionar/botao-adicionar.component';
 export * from './lib/botao-adicionar/botao-adicionar.module';
 
+export * from './lib/botao-cadastrar/botao-cadastrar.component';
+export * from './lib/botao-cadastrar/botao-cadastrar.module';
+
 export * from './lib/icone-editar/icone-editar.component';
 export * from './lib/icone-editar/icone-editar.module';
 
