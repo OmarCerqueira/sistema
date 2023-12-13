@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarPessoaComponent implements OnInit {
 
-  constructor() { }
+
+
+
+
+
+
+  constructor() {
+
+   }
 
   ngOnInit(): void {
 
@@ -23,39 +31,46 @@ export class ListarPessoaComponent implements OnInit {
 
   // }
 
-  adicionar() {
-    const novaLinha = {
-      nome: `Nova Linha ${this.pessoas.length + 1}`,
-      endereco: `Nova Linha ${this.pessoas.length + 1}`,
-      email: `Nova Linha ${this.pessoas.length + 1}`,
-      cpf: `Nova Linha ${this.pessoas.length + 1}`
-    };
 
-    this.pessoas.push(novaLinha);
-  }
+  // adicionar() {
+  //   const novaLinha = {
+  //     id: `Nova Linha ${this.pessoas.length + 1}`,
+  //     nome: `Nova Linha ${this.pessoas.length + 1}`,
+  //     endereco: `Nova Linha ${this.pessoas.length + 1}`,
+  //     email: `Nova Linha ${this.pessoas.length + 1}`,
+  //     cpf: `Nova Linha ${this.pessoas.length + 1}`
+  //   };
+
+  //   this.pessoas.push(novaLinha);
+  // }
 
   titulo = 'Lista de Pessoas';
 
+
   pessoas = [
     {
+      'id' : 1,
       'nome' : 'Omar Cerqueira e Silva',
       'endereco' : 'R Sabino Silva',
       'email' : 'omar.cerqueira12@cerqueira.com',
       'cpf' : '465.456.152-15'
     },
     {
+      'id' : 2,
       'nome' : 'Lucas Santana',
       'endereco' : 'R Paripe',
       'email' : 'lucas.lu@cerqueira.com',
       'cpf' : '489.594.258-95'
     },
     {
+      'id' : 3,
       'nome' : 'Fernanda Oliveira',
       'endereco' : 'R Demdezeiro',
       'email' : 'fernanda-oli@cerqueira.com',
       'cpf' : '487.569.589-25'
     },
     {
+      'id' : 4,
       'nome' : 'Alex Pereira',
       'endereco' : 'R Mont Serrat',
       'email' : 'alex.al@cerqueira.com',
