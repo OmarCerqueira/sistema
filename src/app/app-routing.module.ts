@@ -8,19 +8,19 @@ import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.componen
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: ListarPessoaComponent
   },
   {
-    path: 'editar-pessoa/:id',
+    path: "editar-pessoa/:id",
     component: EditarPessoaComponent
   },
   {
-    path: 'excluir-pessoa/:id',
+    path: "excluir-pessoa/:id",
     component: ExcluirPessoaComponent
   },
   {
-    path: 'inserir-pessoa',
+    path: "inserir-pessoa",
     component: InserirPessoaComponent
   }
 

@@ -10,6 +10,7 @@ import { ExcluirPessoaComponent } from './excluir-pessoa/excluir-pessoa.componen
 import { AppRoutingModule } from './app-routing.module';
 import { BotaoCadastrarModule } from 'projects/layout/src/lib/botao-cadastrar/botao-cadastrar.module';
 import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.componen
     IconeEditarModule,
     IconeVisualizarModule,
     IconeExcluirModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
