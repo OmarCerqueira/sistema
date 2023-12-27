@@ -11,27 +11,27 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nomecompleto">Nome Completo</label>
-        <input type="text" class="form-control" id="nomecompleto">
+        <input type="text" class="form-control" id="nomecompleto" placeholder="Cristina da Silva" #nomecompleto required>
       </div>
       <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email">
+        <input type="email" class="form-control" id="email" placeholder="seuemail@email.com" #email required>
       </div>
       <div class="form-group col-md-6">
         <label for="cpf">CPF</label>
-        <input type="text" class="form-control" id="cpf">
+        <input type="text" class="form-control" id="cpf" placeholder="123.456.789-10" #cpf required>
       </div>
     </div>
 
     <div class="form-group">
       <label for="endereco">Endereço</label>
-      <input type="text" class="form-control" id="endereco" placeholder="Rua Vasconcelos, 152">
+      <input type="text" class="form-control" id="endereco" placeholder="Rua Vasconcelos, 152" #endereco required>
     </div>
 
 
     <div class="row">
       <div class="col-sm-6">
-        <button type="submit" class="btn btn-success">Salvar</button>
+        <button type="submit" class="btn btn-success" (click)="salvar(nomecompleto.value, email.value, cpf.value, endereco.value)">Salvar</button>
       </div>
 
       <div class="col-sm-6">

@@ -9,6 +9,7 @@ import { PessoaService } from '../pessoa.service';
 export class ListarPessoaComponent implements OnInit {
 
   pessoas: any;
+  titulo = 'Lista de Pessoas';
 
   constructor(private servicePessoa: PessoaService) { }
 
@@ -46,7 +47,7 @@ export class ListarPessoaComponent implements OnInit {
   //   this.pessoas.push(novaLinha);
   // }
 
-  titulo = 'Lista de Pessoas';
+
 
 
 }

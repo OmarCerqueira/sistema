@@ -20,4 +20,8 @@ export class PessoaService {
   getTodasPessoas() : Observable<any> {
     return this.http.get(`${servicePessoa}`);
   }
+
+  salvarPessoaNoBancoDeDados(pessoa: any) : Observable<any> {
+    return this.http.post(`${servicePessoa}`, pessoa);
+  }
 }
