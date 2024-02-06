@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PessoaService } from '../pessoa.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inserir-pessoa',
@@ -8,7 +9,7 @@ import { PessoaService } from '../pessoa.service';
 })
 export class InserirPessoaComponent {
 
-  constructor(private servicePessoa: PessoaService) {}
+  constructor(private servicePessoa: PessoaService, private router: Router) {}
 
   ngOnInit(): void {
 
@@ -25,8 +26,8 @@ export class InserirPessoaComponent {
 
     this.servicePessoa.salvarPessoaNoBancoDeDados(pessoa).subscribe(resultado => {
       alert("Nova Pessoa Inserida");
-
-    })
+      this.router.navigate(['/']);
+    });
 
 
   }

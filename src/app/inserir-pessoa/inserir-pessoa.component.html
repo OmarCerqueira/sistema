@@ -7,7 +7,7 @@
 
   <hr>
 
-  <form>
+  <div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nomecompleto">Nome Completo</label>
@@ -31,17 +31,18 @@
 
     <div class="row">
       <div class="col-sm-6">
-        <button type="submit" class="btn btn-success" (click)="salvar(nomecompleto.value, email.value, cpf.value, endereco.value)">Salvar</button>
-      </div>
 
+        <button type="submit" class="btn btn-secondary" routerLink="">Voltar</button>
+
+      </div>
+      
       <div class="col-sm-6">
-
-        <button type="submit" class="btn btn-secondary float-right" routerLink="">Voltar</button>
-
+        <button type="submit" class="btn btn-success float-right" (click)="salvar(nomecompleto.value, email.value, cpf.value, endereco.value)">Salvar</button>
       </div>
+
     </div>
 
-  </form>
+  </div>
 
 </div>
 
