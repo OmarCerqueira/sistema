@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PessoaService } from '../pessoa.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-inserir-pessoa',
@@ -9,10 +10,41 @@ import { Router } from '@angular/router';
 })
 export class InserirPessoaComponent {
 
-  constructor(private servicePessoa: PessoaService, private router: Router) {}
+  formulario: FormGroup | any;
+
+  constructor(private servicePessoa: PessoaService, private router: Router, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      nomecompleto: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(12)
+        ])
+      ],
+      email: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.email
+        ])
+      ],
+      cpf: [
+        '',
+        Validators.compose([
+          Validators.required
 
+        ])
+      ],
+      endereco: [
+        '',
+        Validators.compose([
+          Validators.required
+
+        ])
+      ]
+    });
   }
 
   salvar(nomecompleto: string, email: string, cpf: string, endereco: string) {

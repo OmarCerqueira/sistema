@@ -8,25 +8,25 @@
 
   <!-- {{ pessoaEmEdicao | json }} -->
 
-  <div>
+  <form [formGroup]="formulario">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nomecompleto">Nome Completo</label>
-        <input type="text" class="form-control" id="nomecompleto" #nomecompleto value="{{ pessoaEmEdicao.nome }}">
+        <input type="text" formControlName="nomecompleto" class="form-control" id="nomecompleto" #nomecompleto value="{{ pessoaEmEdicao?.nome }}">
       </div>
       <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" #email value="{{ pessoaEmEdicao.email }}">
+        <input type="email" formControlName="email" class="form-control" id="email" #email value="{{ pessoaEmEdicao?.email }}">
       </div>
       <div class="form-group col-md-6">
         <label for="cpf">CPF</label>
-        <input type="text" class="form-control" id="cpf" #cpf value="{{ pessoaEmEdicao.cpf }}">
+        <input type="text" formControlName="cpf" class="form-control" id="cpf" #cpf value="{{ pessoaEmEdicao?.cpf }}">
       </div>
     </div>
 
     <div class="form-group">
       <label for="endereco">Endereço</label>
-      <input type="text" class="form-control" id="endereco" #endereco value="{{ pessoaEmEdicao.endereco }}">
+      <input type="text" formControlName="endereco" class="form-control" id="endereco" #endereco value="{{ pessoaEmEdicao?.endereco }}">
     </div>
 
 
@@ -37,11 +37,11 @@
 
       <div class="col-sm-6">
 
-        <button type="submit" class="btn btn-success float-right" (click)="editar(nomecompleto.value, email.value, cpf.value, endereco.value)">Salvar</button>
+        <button type="submit" [disabled]="!formulario.valid" class="btn btn-success float-right" (click)="editar(nomecompleto.value, email.value, cpf.value, endereco.value)">Salvar</button>
 
       </div>
     </div>
 
-  </div>
+  </form>
 
 </div>

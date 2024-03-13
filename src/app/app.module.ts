@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BotaoCadastrarModule } from 'projects/layout/src/lib/botao-cadastrar/botao-cadastrar.module';
 import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     IconeVisualizarModule,
     IconeExcluirModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

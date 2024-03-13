@@ -7,25 +7,25 @@
 
   <hr>
 
-  <div>
+  <form [formGroup]="formulario">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nomecompleto">Nome Completo</label>
-        <input type="text" class="form-control" id="nomecompleto" placeholder="Cristina da Silva" #nomecompleto required>
+        <input type="text" formControlName="nomecompleto" class="form-control" id="nomecompleto" placeholder="Cristina da Silva" #nomecompleto>
       </div>
       <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="seuemail@email.com" #email required>
+        <input type="email" formControlName="email" class="form-control" id="email" placeholder="seuemail@email.com" #email>
       </div>
       <div class="form-group col-md-6">
         <label for="cpf">CPF</label>
-        <input type="text" class="form-control" id="cpf" placeholder="123.456.789-10" #cpf required>
+        <input type="text" formControlName="cpf" class="form-control" id="cpf" placeholder="123.456.789-10" #cpf>
       </div>
     </div>
 
     <div class="form-group">
       <label for="endereco">Endereço</label>
-      <input type="text" class="form-control" id="endereco" placeholder="Rua Vasconcelos, 152" #endereco required>
+      <input type="text" formControlName="endereco" class="form-control" id="endereco" placeholder="Rua Vasconcelos, 152" #endereco>
     </div>
 
 
@@ -35,14 +35,14 @@
         <button type="submit" class="btn btn-secondary" routerLink="">Voltar</button>
 
       </div>
-      
+
       <div class="col-sm-6">
-        <button type="submit" class="btn btn-success float-right" (click)="salvar(nomecompleto.value, email.value, cpf.value, endereco.value)">Salvar</button>
+        <button type="submit" [disabled]="!formulario.valid" class="btn btn-success float-right" (click)="salvar(nomecompleto.value, email.value, cpf.value, endereco.value)">Salvar</button>
       </div>
 
     </div>
 
-  </div>
+  </form>
 
 </div>
 
